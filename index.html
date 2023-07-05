@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="sectionLeft">
+        <img class="backgroundDesktop" src="images/bg-main-desktop.png" alt="Background">
+        <img class="backgroundMobile" src="images/bg-main-mobile.png" alt="Background">
+        <section class="cards">
+          <section class="sectionCard">
+            <img class="cardFront" src="images/bg-card-front.png" alt="Card Front">
+            <img class="logoCard" src="images/card-logo.svg" alt="Logo Card">
+            <p id="numberCard">0000 0000 0000 0000</p>
+            <p id="namePerson">Jane Appleseed</p>
+            <p id="numMMYY">00/00</p>
+          </section>
+          <section class="sectionCardBack">
+            <img src="images/bg-card-back.png" alt="Card Back">
+            <p id="numberCVCBack">000</p>
+          </section>
+        </section>
+      </section>
+      <section id="sectionRight" class="sectionRight">
+        <article class="form">
+          <label for="nameP">Cardholder Name</label>
+          <input autocomplete="off" type="text" id="nameP" placeholder="e.g. Jane Appleseed">
+          <span id="spanName"></span>
+
+          <label for="numCard">Card Number</label>
+          <input autocomplete="off" type="text" maxlength="19"  placeholder="e.g. 1234 5678 9123 0000" id="numCard"/>
+          <span id="spanNumCard"></span>
+
+          <section class="dateCVC">
+            <article>
+              <label for="month">Exp. Date (MM/YY)</label>
+              <aside class="MMYY">
+                <nav>
+                  <input autocomplete="off" id="month" maxlength="2" type="text" placeholder="MM">
+                  <span id="spanMM"></span>
+                </nav>
+
+                <nav>
+                  <input autocomplete="off" id="year" maxlength="2" type="text" placeholder="YY">
+                  <span id="spanYY"></span>
+                </nav>
+              </aside>
+            </article>
+            <article>
+              <label for="numCVC">CVC</label>
+              <input autocomplete="off" id="numCVC" maxlength="3" type="text" placeholder="e.g. 123">
+              <span id="spanCVC"></span>
+            </article>
+          </section>
+          <button id="confirm">Confirm</button>
+        </article>
+      </section>
+      <section id="part2" class="sectionRight part2">
+        <img src="images/icon-complete.svg" alt="Icon Complete">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </section>
+    </main>
+    <script src="assets/script.js"></script>
+  </body>
+</html>

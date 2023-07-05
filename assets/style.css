@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+}
+main{
+    display: flex;
+}
+
+.sectionLeft{
+    color: white;
+    height: 789px;
+    overflow: hidden;
+}
+
+.backgroundMobile{
+    display: none;
+}
+
+.cards{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+.sectionCard, .sectionCardBack{
+    position: relative;
+}
+.sectionCardBack{
+    top: 1.5em;
+    left: 5em;
+}
+.logoCard{
+    position: absolute;
+    top: 9%;
+    left: 4%;
+    z-index: 2;
+}
+p{
+    position: absolute;
+}
+#numberCard{
+    font-size: 30px;
+    letter-spacing: 2.5px;
+    top: 40%;
+    left: 4%;
+}
+#namePerson{
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    top: 70%;
+    left: 4%;
+}
+#numMMYY{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    top: 70%;
+    left: 75%;
+}
+#numberCVCBack{
+    font-size: 15px;
+    letter-spacing: 2px;
+    top: 38%;
+    left: 75%;
+}
+
+.sectionRight{
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translateY(-50%);
+    width: 336px;
+}
+
+label{
+    color: hsl(278, 68%, 11%);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .3em;
+    letter-spacing: 1px;
+}
+
+#month, #year{
+    width: 72px;
+}
+#year{
+    margin: 0 14px 0 6px;
+}
+#numCVC{
+    width: 170px;
+}
+
+input, button{
+    width: 336px;
+    font-family: "Space Grotesk", sans-serif;
+    outline: none;
+    border-radius: .5em;
+    padding: .5em 0;
+    font-size: 18px;
+    border: none;
+}
+input::placeholder{
+    color: hsl(270, 3%, 87%);
+    padding-left: .7em;
+}
+input{
+    border: 1px solid hsl(270, 3%, 87%);
+}
+input:focus{
+    border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+    border-radius: .5em;
+    border-width: 1px;
+    border-style: solid;
+}
+
+button{
+    margin-top: 2em;
+    cursor: pointer;
+    background: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+.dateCVC, .MMYY{
+    display: flex;
+}
+.dateCVC article{
+    display: grid;
+}
+
+.form{
+    display: grid;
+}
+
+span{
+    font-size: 15px;
+    color: red;
+}
+
+#spanName, #spanNumCard{
+    margin-bottom: .8em;
+}
+
+.part2{
+    display: none;
+    text-align: center;
+}
+.part2 h1{
+    text-transform: uppercase;
+}
+.part2 p{
+    position: relative;
+    color: hsl(279, 6%, 55%);
+}
+.part2 button{
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 1150px) {
+    .sectionCardBack{
+        top: 0;
+        left: 0;
+    }
+}
+@media screen and (max-width: 1054px) {
+    .cards{
+        left: 5%;
+    }
+    .sectionRight{
+        left: 59%;
+    }
+}
+@media screen and (max-width: 860px) {
+    .cards{
+        left: 5%;
+    }
+    .sectionRight{
+        left: 59%;
+    }
+}
+@media screen and (max-width: 859px) {
+    .sectionLeft, .sectionRight{
+        position: static;
+    }
+    main{
+        display: grid;
+    }
+    .backgroundMobile{
+        display: block;
+        width: 100%;
+        z-index: -2;
+    }
+    .backgroundDesktop{
+        display: none;
+    }
+    .cards{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-70%);
+    }
+    .sectionCard{
+        z-index: 2;
+    }
+    .sectionCardBack{
+        z-index: 1;
+        position: absolute;
+        left: 40%;
+        top: -40%;
+    }
+    .sectionRight{
+        position: absolute;
+        transform: translate(-65%, 20%);
+        width: 70%;
+    }
+    .sectionRight input, button{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 653px) {
+    .cards{
+        position: absolute;
+        left: 55%;
+        transform: translateX(-70%);
+    }
+    .sectionCardBack{
+        left: 30%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cards{
+        position: absolute;
+        left: 55%;
+        transform: translateX(-70%);
+    }
+    .sectionCardBack{
+        left: 26%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .cardFront, .sectionCardBack img{
+        width: 400px;
+    }
+    #numberCard{
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 525px) {
+    .cardFront, .sectionCardBack img{
+        width: 350px;
+    }
+    #numberCard{
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .cardFront, .sectionCardBack img{
+        width: 300px;
+    }
+    #numberCard{
+        font-size: 20px;
+    }
+    #numberCVCBack{
+        top: 32%;
+        left: 76%;
+        font-size: 16px;
+    }
+    .sectionRight{
+        transform: translate(-75%, 20%);
+    }
+}
+@media screen and (max-width: 400px) {
+    .cardFront, .sectionCardBack img{
+        width: 250px;
+    }
+    #numberCard{
+        font-size: 16px;
+        top: 50%;
+    }
+    #numberCVCBack{
+        top: 31%;
+        font-size: .8em;
+    }
+    .sectionRight{
+        transform: translate(-70%, 20%);
+    }
+    .form input, button{
+        width: 100%;
+    }
+    #numCVC{
+        width: 80%;
+    }
+}
